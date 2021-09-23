@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap" rel="stylesheet">
+    <title>Sorry, We are down for maintainence</title>
+    <style>
+        body {
+            font-family: 'Sen', sans-serif;
+        }
+
+        #box {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            img {
+                width: 60%;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            img {
+                width: 60%;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            img {
+                width: 80%;
+            }
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        <img id="image" />
+    </div>
+    <br />
+    <input type="button" value="Randomize!" onClick="randImg()" />
+    <h1>Sorry, we're down for maintenance.</h1>
+    <p>We are working to get it back <br> up and running soon as <br> possible.</p>
+
+</body>
+<script>
+    var images = [
+        "/img/animation.gif",
+        "/img/maintenance.gif",
+        "/img/web-developer.gif"
+    ];
+
+    function randImg() {
+        var size = images.length
+        var x = Math.floor(size * Math.random())
+        document.getElementById('image').src = images[x];
+    }
+
+    randImg();
+</script>
+
+</html>
